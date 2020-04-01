@@ -7,7 +7,7 @@ typedef struct no{
 }NO;
 NO *end = NULL;
 NO *start = NULL;
-int tam = 0;
+int size = 0;
 
 void addNewElement(int value, int pos){
         NO *new =(NO*) malloc(sizeof(NO));
@@ -17,7 +17,7 @@ void addNewElement(int value, int pos){
         if(start == NULL){
             start = new;
             end = new;
-        }else if (pos == tam){
+        }else if (pos == size){
             new->ant = end;
             end->next = new;
             end = new;
@@ -37,13 +37,13 @@ void addNewElement(int value, int pos){
            aux->next = new;
         }
 
-        tam++;
+        size++;
     }
 
 void printWithOutRecursion(){
     int i;
     NO *aux = start;
-    for(i=0; i<tam;i++){
+    for(i=0; i<size;i++){
         printf("%d\t", aux->value);
         aux = aux->next;
     }
@@ -59,25 +59,25 @@ void printWithRecursion(NO *aux){
 }
 
 void rmvElement (int pos){
-    NO *lixo = start;
-    if(pos>=0 && tam>0 && pos<=tam){
-        if(pos==0 && tam == 1){
-            lixo = start;
+    NO *trash = start;
+    if(pos>=0 && size>0 && pos<=size){
+        if(pos==0 && size == 1){
+            trash = start;
             start = NULL;
             end = NULL;
-            tam--;
-            free (lixo);
-        }else if(pos==tam-1){
-            lixo = end;
+            size--;
+            free (trash);
+        }else if(pos==size-1){
+            trash = end;
             end = end -> ant;
             end->next = NULL;
-            free(lixo);
+            free(trash);
         }else if( pos == 0){
-            lixo = start;
+            trash = start;
             start = start->next;
             start->ant = NULL;
-            free(lixo);
-        }else if(pos>0 && pos <tam-1){
+            free(trash);
+        }else if(pos>0 && pos <size-1){
             NO *aux = start;
             int i;
             for(i=0; i<pos; i++){
@@ -87,7 +87,7 @@ void rmvElement (int pos){
             aux ->next->ant = aux->ant;
             free(aux);
         }
-        tam--;
+        size--;
     }
 }
 int main(){
