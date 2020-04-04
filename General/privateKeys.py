@@ -1,0 +1,9 @@
+twitter_api_key = 'aZbwoqCXtIpTAEvtTW86nUTWb'
+
+twitter_secret_key = '8wtamoPqtE4NmnQhHx7E06uaRVJSPCeKE8oH1OMwRN23XXsvYh'
+
+twitter_token = '1226155791067099136-L83YMWiRqxhwYNoi1KqcWvxOK0HHNl'
+
+twitter_token_secret = 'Cx2DTPzzDvL9YUGyf1dCDKFG7vT7fpBjJLTZnVRGelNja'
+
+twitter_barrier_token = 'AAAAAAAAAAAAAAAAAAAAAO%2BjDQEAAAAAbn%2BIztmfB9Mof%2FXnvZIMZPpSijU%3DWEBQ2S4dCRIaouaoOItGBggQeAcSxI1yxHzyaOLvCwBdI2VPm8'
