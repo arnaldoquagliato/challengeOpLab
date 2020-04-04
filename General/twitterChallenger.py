@@ -6,9 +6,12 @@ auth.set_access_token(privateKeys.twitter_token, privateKeys.twitter_token_secre
 
 api = tweepy.API(auth)
 
-name = "palavra"
+
+
+name = raw_input("Digit a word: ")
+
 cont = 0
-for result in api.search(q="{name}", count = 10):
+for result in api.search(q={name}, count = 10, result_type = "recent"):
     print("Twitter number: {} " .format(cont))
     print (result.text + "\n")
     cont +=1
